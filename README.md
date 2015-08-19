@@ -8,7 +8,7 @@ version 0.12.1. and  [bourbon neat generator](https://github.com/koolth/generato
 This assumes you have [node.js](https://nodejs.org/), [Yeoman](http://yeoman.io/), [Bower](http://bower.io/), and [Grunt](http://gruntjs.com/) installed (if you're still setting up Yeoman, you can check out the [official documentation](http://yeoman.io/learning/index.html)).
 
 Clone or fork the repo:
-`$ git clone https://github.com/kgcreative/yo-angular-bourbon-neat.git`
+`$ git clone https://github.com/kgcreative/simply-social`
 
 Install the dependencies from the package.json file to the project:
 `$ npm install`
