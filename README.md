@@ -3,9 +3,6 @@
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.12.1. and  [bourbon neat generator](https://github.com/koolth/generator-bourbon-neat) version 1.0.0
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.1. and  [bourbon neat generator](https://github.com/koolth/generator-bourbon-neat) version 1.0.0
-
 ## Build & development
 
 This assumes you have [node.js](https://nodejs.org/), [Yeoman](http://yeoman.io/), [Bower](http://bower.io/), and [Grunt](http://gruntjs.com/) installed (if you're still setting up Yeoman, you can check out the [official documentation](http://yeoman.io/learning/index.html)).
