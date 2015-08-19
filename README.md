@@ -6,7 +6,7 @@ version 0.12.1. and  [bourbon neat generator](https://github.com/koolth/generato
 ## Build & development
 
 Clone or fork the repo:
-`$ git clone https://github.com/kgcreative/yo-angular-bourbon-neat.git`
+`$ git clone https://github.com/kgcreative/simply-social.git`
 
 Install the node.js dependencies from the package.json file to the project:
 `$ npm install`
