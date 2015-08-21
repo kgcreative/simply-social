@@ -70,6 +70,8 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
   <!-- build:js scripts/vendor/modernizr.js -->
   <script src="../bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
+  <script src="//use.typekit.net/yof5cjw.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 </head>
 <body ng-app="simply-socialApp">
@@ -77,22 +79,50 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<header role="banner">
-  <div class="navbar navbar-default" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-
-        <a class="navbar-brand" href="#/">simply social</a>
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="#/" class="logo">
+      <i class="simply-icon-simply-social-logo"></i> <span class="simply">simply</span><span class="social">social</span>
+    </a>
+    <!-- a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a-->
+    <!--nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
+        <li class="nav-link"><a ng-href="#/about">About Us</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+        <li class="nav-link more"><a href="javascript:void(0)">More</a>
+          <ul class="submenu">
+            <li><a href="javascript:void(0)">Submenu Item</a></li>
+            <li><a href="javascript:void(0)">Another Item</a></li>
+            <li class="more"><a href="javascript:void(0)">Item with submenu</a>
+              <ul class="submenu">
+                <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
+                <li><a href="javascript:void(0)">Another Item</a></li>
+              </ul>
+            </li>
+            <li class="more"><a href="javascript:void(0)">Another submenu</a>
+              <ul class="submenu">
+                <li><a href="javascript:void(0)">Sub-submenu</a></li>
+                <li><a href="javascript:void(0)">An Item</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav-->
+    <div class="navigation-tools">
+      <a href="javascript:void(0)" class="new-message"><i class="simply-icon-new-message"></i></a>
+      <div class="search-bar">
+        <form role="search">
+          <input type="search" placeholder="" />
+          <button type="submit">
+            <i class="simply-icon-search"></i>
+          </button>
+        </form>
       </div>
-
-      <div class="collapse">
-
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#/">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#/">Contact</a></li>
-        </ul>
-      </div>
+      <a href="javascript:void(0)" class="profile more">
+        <img src="/images/avatars/jessica-tuan_30.jpg" alt="Jessica Tuan">
+      </a>
     </div>
   </div>
 </header>
@@ -126,5 +156,23 @@ Brought to you by <a href="http://kevingarcia.info">Kevin Garcia</a>
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>
 <!-- endbuild -->
+
+<!-- Nav -->
+<script>
+$(document).ready(function() {
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+});
+</script>
+<!-- /Nav -->
 </body>
 </html>
