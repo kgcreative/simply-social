@@ -1,0 +1,11 @@
+$primary-color: #00cc99;
+$accent-color: #f4f5f7;
+$dark-gray: #262728 !default;
+$linkColor: $primary-color;
+$hoverColor: lighten($linkColor, 10);
+$borderColor: #b3b3b3;
+$base-border-color: gainsboro !default;
+$base-border-radius: 3px !default;
+$action-color: #477DCA !default;
+$large-screen: em(860) !default;
+$small-screen: em(560) !default;
