@@ -1,0 +1,51 @@
+{
+	"posts" : {
+		"text": [
+			{
+				"id" : "027f8813-175c-43e7-98f5-c3a598faccae",
+				// Use this Epoch timestamp to calculate the elapsed time since this was posted
+				// Also use this property to orderBy with Angular...you can just compare these integers using:
+				// ng-repeat="post in posts | orderBy:'-timestamp'"
+				"timestamp" : 1440120341,
+				"name" : "Same Soffes",
+				// Make sure to use the $trust function in your controller when you bind this attribute to a scope property
+				"content" : "How to get inspired the right way - Designmodo bit.ly/135ft",
+				// Use this bool to determine whether to generate the Expand link on each post
+				"hasComments" : true,
+				"comments" : [
+					{
+						"timestamp" : 1439169941,
+						"name" : "Test Testerson",
+						"content" : "This post rocks!"
+					}
+				],
+				"repostUrl" : "http://invision.com/handleOnThisPost"
+			},
+			{}
+		],
+		"photos" : [
+			{
+				"id" : "f523357b-cae3-4ae5-999c-65f323b5a638",
+				"timestamp" : 1440120363,
+				"name" : "Meg Robichaud",
+				"content" : "My view this morning is simply beautiful... \n instagram.com/p/123456789",
+				"hasComments" : false,
+				"comments" : [],
+				"repostUrl" : "http://invision.com/handleOnThisPost"
+			},
+			{}
+		],
+		"videos" : [
+			{
+				"id" : "c97045f4-50d1-4609-9646-a458067cee56",
+				"timestamp" : 1439342741,
+				"name" : "Victor Leal",
+				"content" : "You have to see this bike. It will make your daily commute an absolute joy ride! \n vimeo.com/12345678",
+				"hasComments" : false,
+				"comments" : [],
+				"repostUrl" : "http://invision.com/handleOnThisPost"
+			},
+			{}
+		]
+	}
+}
