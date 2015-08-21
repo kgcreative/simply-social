@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name simply-socialApp.controller:settingsController
+ * @name simply-socialApp.controller:SettingsController
  * @description
- * # settingsController
+ * # SettingsController
  * Controller of the simply-socialApp
  */
 angular.module('simply-socialApp')
-  .controller('settingsController', function () {
+  .controller('SettingsController', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
