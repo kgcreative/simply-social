@@ -47,14 +47,14 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
 -->
 
 <!doctype html>
-<html class="no-js" lang="EN">
+<html class="no-js" lang="EN" ng-app="simply-socialApp">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="author" content="Kevin Garcia">
   <meta name="description" content="A bourbon/neat/angularJS app to showcase social aggregation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <base href="/">
+  <base href="/#/">
   <title>Simply Social</title>
 
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -71,21 +71,18 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
   <!-- build:js scripts/vendor/modernizr.js -->
   <script src="../bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
-  <!-- build:js scripts/vendor/picturePolyfill.js -->
-  <script src="../bower_components/picturePolyfill/dist/picturePolyfill.min.js"></script>
-  <!-- endbuild -->
   <script src="//use.typekit.net/yof5cjw.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 </head>
-<body ng-app="simply-socialApp">
+<body>
 <!--[if lte IE 8]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
-    <a href="/" class="logo">
+    <a ng-href="/#/" class="logo">
       <i class="simply-icon-simply-social-logo"></i> <span class="simply">simply</span><span class="social">social</span>
     </a>
 
@@ -102,7 +99,7 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
             <li><a href="javascript:void(0)">Profile</a></li>
             <li><a href="javascript:void(0)">Following</a></li>
             <li><a href="javascript:void(0)">Followers</a></li>
-            <li><a href="/settings">Settings</a></li>
+            <li><a ng-href="/#/settings">Settings</a></li>
           </ul>
         </li>
       </ul>
@@ -151,24 +148,7 @@ Brought to you by <a href="http://kevingarcia.info">Kevin Garcia</a>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>
+<script src="scripts/controllers/settings.js"></script>
 <!-- endbuild -->
-
-<!-- Nav -->
-<script>
-$(document).ready(function() {
-  var menuToggle = $('#js-mobile-menu').unbind();
-  $('#js-navigation-menu').removeClass("show");
-
-  menuToggle.on('click', function(e) {
-    e.preventDefault();
-    $('#js-navigation-menu').slideToggle(function(){
-      if($('#js-navigation-menu').is(':hidden')) {
-        $('#js-navigation-menu').removeAttr('style');
-      }
-    });
-  });
-});
-</script>
-<!-- /Nav -->
 </body>
 </html>

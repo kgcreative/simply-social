@@ -290,7 +290,7 @@ header.navigation {
     }
 
     img {
-      border-radius: em(3);
+      border-radius: em(6);
     }
 
     //&::after {
@@ -330,8 +330,7 @@ header.navigation {
       float: left;
       margin: {
         top: em(9);
-        left: em(-1);
-        right: em(4);
+        right: em(8);
       }
     }
   }
@@ -346,7 +345,19 @@ header.navigation {
     padding: rem(15px) 1rem;
     width: 65%;
     display: inline-block;
-    margin: 0 auto;
+    margin: 0 auto; // top right bottom left
+
+    @include media($horizontal-bar-mode) {
+      display: inline-block;
+      position: relative;
+      width: em(218);
+      padding: em(15) em(8); // top right bottom left
+
+      input {
+        @include box-sizing(border-box);
+        display: block;
+      }
+    }
 
     form {
       position: relative;
@@ -372,30 +383,18 @@ header.navigation {
         background: $navigation-search-background;
         border: none;
         position: absolute;
-        right: rem(10px);
-        top: rem(6px);
-        bottom: rem(7px);
+        right: em(10);
+        top: em(7);
+        bottom: em(7);
         left: auto;
         outline: none;
         padding: 0;
         color: lighten($navigation-nav-accent-color, 5);
-        font-size: rem(17.5px);
+        font-size: em(16px);
 
         //i {
         //  padding: 1px;
         //}
-      }
-    }
-
-    @include media($horizontal-bar-mode) {
-      display: inline-block;
-      position: relative;
-      width: 232px;
-      padding: em(15px) 1rem;
-
-      input {
-        @include box-sizing(border-box);
-        display: block;
       }
     }
   }
