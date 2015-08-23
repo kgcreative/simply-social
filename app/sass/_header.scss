@@ -24,6 +24,13 @@ header.navigation {
   position: fixed;
   left: 0;
   top: 0;
+  a {
+    color: $primary-color;
+    &:hover, &:focus {
+    color: lighten($primary-color, 20);
+    outline-style: none;
+    }
+  }
 
   .navigation-wrapper {
     @include clearfix;
@@ -207,12 +214,15 @@ header.navigation {
     display: none;
     padding-left: 0;
     position: absolute;
-    right: em(-26);
+    right: em(-29);
     left: auto;
-    top: 2.75em;
+    top: 3.25em;
     bottom: auto;
-    border-radius: initial;
+    border-radius: 4px;
     min-width:em(100);
+    line-height: 2em;
+    font-size: em(13);
+    background-color: lighten($accent-color, 7);
     // Required for Up Triangle
       /*&:before, */&:after {
         content: "";
@@ -228,14 +238,6 @@ header.navigation {
         display:block;
         border-width: 6px;
       }
-
-      // Stroke
-      //&:before {
-      //  top: -0.5em;
-
-        /* If 1px darken stroke slightly */
-      //  border-bottom-color: #777;
-      //}
 
       /* Fill */
       &:after {
@@ -253,29 +255,19 @@ header.navigation {
     li {
       display: block;
       padding-right: 0;
-      line-height: 2em;
+      border-bottom: 1px solid darken($accent-color, 5);
 
-      &:first-child > a {
-        border-top-left-radius: $base-border-radius;
-        border-top-right-radius: $base-border-radius;
-      }
-
-      &:last-child > a {
-        border-bottom-left-radius: $base-border-radius;
-        border-bottom-right-radius: $base-border-radius;
+      &:last-child {
         border-bottom: 0;
       }
 
       a {
-        background-color: lighten($accent-color, 7);
         padding: 0 $navigation-submenu-padding;
         display: inline-block;
         text-align: left;
         width: 100%;
-        border-bottom: 1px solid darken($accent-color, 5); //compatibility
-        border-bottom: 0.5px solid darken($accent-color, 5);
         color: darken($accent-color, 30);
-        font-size: em(13);
+        
       }
     }
   }
@@ -354,7 +346,7 @@ header.navigation {
       padding: em(15) em(8); // top right bottom left
 
       input {
-        @include box-sizing(border-box);
+        box-sizing:border-box;
         display: block;
       }
     }
@@ -363,7 +355,7 @@ header.navigation {
       position: relative;
 
       input[type=search] {
-        @include box-sizing(border-box);
+        box-sizing:border-box;
         background: $navigation-search-background;
         border-radius: $base-border-radius * 1.5;
         border: $navigation-search-border;
@@ -373,6 +365,11 @@ header.navigation {
         margin: 0;
         padding: rem(6px) 0.8em;
         width: 100%;
+        &:focus {
+          outline-color: lighten($navigation-background, 12);
+          outline-offset: -1px;
+          outline-width: 10px;
+        }
 
         @include media($horizontal-bar-mode) {
           width: 100%;

@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc overview
- * @name simply-socialApp
+ * @name simplySocialApp
  * @description
- * # simply-socialApp
+ * # simplySocialApp
  *
  * Main module of the application.
  */
 
 angular
-  .module('simply-socialApp', [
+  .module('simplySocialApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -18,9 +18,10 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'angularMoment'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider) {
     
     $routeProvider
       .when('/', {
@@ -40,7 +41,5 @@ angular
       })
       .otherwise({
         redirectTo: '/'
-      });
-
-      
+      }); 
   });

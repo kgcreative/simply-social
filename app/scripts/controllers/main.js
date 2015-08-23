@@ -2,16 +2,45 @@
 
 /**
  * @ngdoc function
- * @name simply-socialApp.controller:MainController
+ * @name simplySocialApp.controller:MainController
  * @description
  * # MainController
- * Controller of the simply-socialApp
+ * Controller of the simplySocialApp
  */
-angular.module('simply-socialApp')
-  .controller('MainController', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('simplySocialApp')
+  .controller('MainController', function ($scope, $rootScope, $http, $anchorScroll, $location) {
+  	 $http.get('/data/content.json').success(function (data) { 
+	    console.log('success!');
+	    $rootScope.postData = data;
+	    
+	    var allPosts = [];
+
+				for (var a = 0; a < data.posts.text.length; a ++ ){
+					allPosts.push(data.posts.text[a]);
+				}
+				for (var b = 0; b < data.posts.photos.length; b ++ ){
+					allPosts.push(data.posts.photos[b]);
+				}
+				for (var c = 0; c < data.posts.videos.length; c ++ ){
+					allPosts.push(data.posts.videos[c]);
+				}
+
+			$scope.allPosts = allPosts;
+
+			$scope.photoPosts = data.posts.photos;
+
+			$scope.videoPosts = data.posts.videos;
+
+			console.log(allPosts);
+
+
+		  $scope.scrollTo = function(id) {
+	      $location.hash(id);
+	      $anchorScroll();
+		   };
+
+	    });
+	});
+
+
+

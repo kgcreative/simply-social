@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name simply-socialApp.controller:AboutController
+ * @name simplySocialApp.controller:AboutController
  * @description
  * # AboutController
- * Controller of the simply-socialApp
+ * Controller of the simplySocialApp
  */
-angular.module('simply-socialApp')
+angular.module('simplySocialApp')
   .controller('AboutController', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
