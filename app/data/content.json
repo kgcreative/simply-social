@@ -7,6 +7,7 @@
 				"isLoved" : false,
 				"timestamp" : 1440304424,
 				"name" : "Sam Soffes",
+				"avatar" : "/images/avatars/m1.jpg",
 				"content" : "How to get inspired the right way - Designmodo <a>bit.ly/135ft</a> Good stuff from <a>@designmodo!</a>",
 				"hasComments" : true,
 				"comments" : [
@@ -26,7 +27,9 @@
 				"isLoved" : false,
 				"timestamp" : 1440120363,
 				"name" : "Meg Robichaud",
+				"avatar" : "/images/avatars/w1.jpg",
 				"content" : "My view this morning is simply beautiful... \n<a>instagram.com/p/123456789</a>",
+				"photo" : "photoUrl",
 				"hasComments" : false,
 				"comments" : [],
 				"vrepostUrl" : "http://invision.com/handleOnThisPost"
@@ -39,7 +42,22 @@
 				"isLoved" : false,
 				"timestamp" : 1439342741,
 				"name" : "Victor Leal",
+				"avatar" : "/images/avatars/m2.jpg",
 				"content" : "You have to see this bike. It will make your daily commute an absolute joy ride! \n <a>vimeo.com/12345678</a>",
+				"video" : "videoUrl",
+				"hasComments" : false,
+				"comments" : [],
+				"vrepostUrl" : "http://invision.com/handleOnThisPost"
+			},
+			{
+				"id" : "c97045f4-50d1-4609-9646-a498067cee56",
+				"postType" : "video",
+				"isLoved" : false,
+				"timestamp" : 1439342751,
+				"name" : "Victor Leal",
+				"avatar" : "/images/avatars/m2.jpg",
+				"content" : "You have to see this bike. It will make your daily commute an absolute joy ride! \n <a>vimeo.com/12345678</a>",
+				"video" : "videoUrl",
 				"hasComments" : false,
 				"comments" : [],
 				"vrepostUrl" : "http://invision.com/handleOnThisPost"

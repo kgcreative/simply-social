@@ -19,18 +19,14 @@
 		</div>
 	</div>
 
-  <div ng-class="post.postType" class="" ng-repeat="post in allPosts | orderBy:'-timestamp'" id="{{ post.ID }}" >
-  	<img ng-src="{{ post.imageSrc }}" alt="{{ post.name }}" />
+  <div ng-class="post.postType" class="post" ng-repeat="post in allPosts | orderBy:'-timestamp'" id="{{ post.ID }}" >
+  	<img ng-src="{{ post.avatar }}" alt="{{ post.name }}" />
   	<div class="post-details">
 	  	<div class="name"> {{ post.name }}</div>
 	  	<a ng-click="null()" class="reply"><i class="simply-icon-reply"></i></a>
 	  	<i class="simply-icon-love" ng-class=""></i>
 	  	<span am-time-ago="{{ post.timestamp  }}" am-preprocess="unix"></span>
+	  	<p ng-bind-html="post.content"></p>
 	  </div>
-	  <p ng-bind-html="post.content"></p>
-
-  	<ul>
-  		<li>{{ post.id }}</li>
-  	</ul>
   </div>
 </div>

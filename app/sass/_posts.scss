@@ -1,0 +1,39 @@
+.post {
+	max-width: $content-width;
+	margin: 2em;
+	border: 1px solid darken($accent-color, 10);
+	border-radius: 4px;
+	padding: 1.5em;
+	overflow: hidden;
+	height: auto;
+	
+
+	@include media($small-screen + 4em) {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img {
+		//position: relative;
+		width: em(40);
+		height: em(40);
+		border-radius: 4px;
+		display: block;
+	}
+
+	.post-details {
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 0 0 0 (1.5em + em(40)); // top right bottom left
+		left: 0;
+		top: em(-40);
+		margin-bottom: em(-40);
+		height: auto;
+
+		p {
+			margin:0;
+		}
+	}
+}

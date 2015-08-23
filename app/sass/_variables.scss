@@ -8,5 +8,6 @@ $borderColor: #b3b3b3;
 $base-border-color: gainsboro !default;
 $base-border-radius: 3px !default;
 $action-color: #477DCA !default;
+$content-width: 575px !default;
 $large-screen: em(860) !default;
-$small-screen: em(560) !default;
+$small-screen: em($content-width) !default;
