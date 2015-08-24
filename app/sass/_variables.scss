@@ -2,6 +2,7 @@ $primary-color: #00cc99;
 $accent-color: #f4f5f7;
 $dark-gray: #262728 !default;
 $font-color: #888888 !default;
+$font-family: 'proxima-nova', $helvetica !default;
 $linkColor: lighten($font-color, 20);
 $hoverColor: lighten($linkColor, 10);
 $borderColor: #b3b3b3;

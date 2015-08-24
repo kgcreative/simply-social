@@ -345,7 +345,7 @@ header.navigation {
           background: $navigation-search-background;
           border-radius: $base-border-radius * 1.5;
           border: $navigation-search-border;
-          color: lighten($navigation-nav-accent-color, 5);
+          color: lighten($navigation-nav-accent-color, 20);
           font-size: em(13px);
           font-style: italic;
           margin: 0;
@@ -372,7 +372,7 @@ header.navigation {
           left: auto;
           outline: none;
           padding: 0;
-          color: lighten($navigation-nav-accent-color, 5);
+          color: lighten($navigation-nav-accent-color, 10);
           font-size: em(16px);
 
           //i {
