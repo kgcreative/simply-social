@@ -1,0 +1,36 @@
+<div class="home">
+	<div class="hero">
+		<div class="write-box">
+        <form role="write">
+          <input type="text" placeholder="What&rsquo;s on your mind?" />
+        </form>
+        <span class="photo"><a><i class="simply-icon-photo"></i> Add Photo</a></span><span class="video"><a><i class="simply-icon-video"></i> Add Video</a></span>
+      </div>
+		<div class="selector">
+			<ul class="filter">
+				<li><a ng-href="/#/">All posts</a></li>
+				<li class="current"><a ng-href="/#/photos">Photos</a></li>
+				<li><a ng-href="/#/videos">Videos</a></li>
+			</ul>
+			<ul class="toggle">
+				<li><a><i class="simply-icon-list"></i></a></li>
+				<li><a><i class="simply-icon-tile"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="posts">
+	  <div ng-class="post.postType" class="post" ng-repeat="post in photoPosts | orderBy:'-timestamp'" id="{{ post.ID }}" >
+	  	<img ng-src="{{ post.avatar }}" alt="{{ post.name }}" class="avatar" />
+	  	<h3 class="name"> {{ post.name }}</h3>
+	  	<div class="post-details">
+		  	<a ng-click="null()" class="reply"><i class="simply-icon-reply"></i></a>
+		  	<a><i class="simply-icon-love" ng-class=""></i></a>
+		  	<div class="timestamp">{{ post.abbrTime }}</div>
+		  </div>
+		  <p ng-if="post.content" ng-bind-html="post.content"></p>
+			<div class="media" ng-if="post.photoUrl"><img src="{{ post.photoUrl }}" class="photo" /></div>
+	  </div>
+	</div>
+    
+</div>
