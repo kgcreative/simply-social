@@ -352,9 +352,29 @@ header.navigation {
           padding: rem(6px) 0.8em;
           width: 100%;
           &:focus {
-            outline-color: lighten($navigation-background, 12);
+            outline-color: lighten($navigation-background, 15);
+            color: lighten($navigation-nav-accent-color, 30);
             outline-offset: -1px;
             outline-width: 10px;
+          }
+
+          &:placeholder {
+            color: lighten($navigation-nav-accent-color, 5);
+          }
+          &::-webkit-input-placeholder {
+           color: lighten($navigation-nav-accent-color, 5);
+          }
+
+          &:-moz-placeholder { /* Firefox 18- */
+           color: lighten($navigation-nav-accent-color, 5);
+          }
+
+          &::-moz-placeholder {  /* Firefox 19+ */
+           color: lighten($navigation-nav-accent-color, 5);
+          }
+
+          &:-ms-input-placeholder {  
+           color: lighten($navigation-nav-accent-color, 5);
           }
 
           @include media($horizontal-bar-mode) {
