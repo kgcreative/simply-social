@@ -1,4 +1,6 @@
 // READ MORE BASE
+// Developed by Kevin Garcia
+// http://codepen.io/kgcreative/pen/YXZKYY
 .read-more-wrap {
 
   .read-more-state
@@ -60,7 +62,8 @@
         background-color: transparentize(black, 0.3);
 
         .read-more-target-inner {
-          width: 100%;
+          width: 80%;
+          margin-left: -4%;
           height: auto;
           max-width: $content-width;
           background-color: $accent-color;
@@ -74,6 +77,11 @@
           padding: 1.5em;
           color: transparentize(#fff, 0.6);
           border-radius: 4px;
+          font-size: 16px; //reset to default
+
+          @include media($small-screen + 2em) {
+              margin: auto;
+            }
 
           a {
             color: $primary-color;
@@ -87,14 +95,14 @@
           input {
             width: 100%;
             max-width: $content-width - 16px;
-            background-color: transparent;
+            background-color: white;
             height: auto;
             border: 0;
             border: none;
             text-align:left;
             font-size: 1.5em;
             font-weight: 300;
-            color: transparentize(white, 0.3);
+            color: $font-color;
             margin: 0.5em 0 1em 0; // 32px / 16px // top right bottom left
 
             @include media($small-screen + 2em) {
