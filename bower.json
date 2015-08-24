@@ -1,27 +1,30 @@
 {
-  "name": "simply-social",
-  "version": "0.0.1",
+  "name": "simplySocial",
+  "version": "0.1.0",
   "dependencies": {
     "angular": "^1.3.0",
     "angular-animate": "^1.3.0",
     "angular-aria": "^1.3.0",
     "angular-cookies": "^1.3.0",
     "angular-messages": "^1.3.0",
+    "angular-moment": "~0.10.2",
     "angular-resource": "^1.3.0",
     "angular-route": "^1.3.0",
     "angular-sanitize": "^1.3.0",
     "angular-touch": "^1.3.0",
-    "normalize-css": "~3.0.3",
-    "neat": "~1.7.2",
-    "jquery": "~1.11.2",
-    "picturePolyfill": "~4.2.0",
-    "angular-moment": "~0.10.2",
     "better-placeholder-polyfill": "~1.3.0",
-    "magnific-popup": "~1.0.0"
+    "jquery": "~1.11.2",
+    "magnific-popup": "~1.0.0",
+    "neat": "~1.7.2",
+    "normalize-css": "~3.0.3",
+    "picturePolyfill": "~4.2.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.3.0"
   },
   "appPath": "app",
-  "moduleName": "simply-social"
+  "moduleName": "simply-social",
+  "resolutions": {
+    "jquery": "~1.11.2"
+  }
 }

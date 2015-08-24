@@ -1,39 +1,114 @@
-.post {
-	max-width: $content-width;
-	margin: 2em;
-	border: 1px solid darken($accent-color, 10);
-	border-radius: 4px;
-	padding: 1.5em;
-	overflow: hidden;
-	height: auto;
-	
-
-	@include media($small-screen + 4em) {
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	img {
-		//position: relative;
-		width: em(40);
-		height: em(40);
+.posts {
+	padding-top: 1em;
+	min-height: em(600);
+	.post {
+		max-width: $content-width;
+		margin: 2em;
+		border: 1px solid darken($accent-color, 5);
 		border-radius: 4px;
-		display: block;
-	}
-
-	.post-details {
-		position: relative;
-		display: block;
-		width: 100%;
-		padding: 0 0 0 (1.5em + em(40)); // top right bottom left
-		left: 0;
-		top: em(-40);
-		margin-bottom: em(-40);
+		padding: 1.5em;
+		overflow: hidden;
 		height: auto;
+		
+
+		@include media($small-screen + 4em) {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		img.avatar {
+			//position: relative;
+			width: em(40);
+			height: em(40);
+			border-radius: 4px;
+			display: block;
+		}
+
+		.post-details {
+			display: block;
+			width: em(200);
+			padding: 1.5em 0 0 0; // top right bottom left
+			margin-top: em(-44);
+			// margin-bottom: em(-40);
+			height: auto;
+			float:right;
+			text-align: right;
+			color: $linkColor;
+
+
+			.timestamp{
+				font-size: em(16);
+				display: inline;
+				margin-left: 16px;
+				color: lighten($linkColor, 5)
+			}
+
+			 a {
+				font-size: em(13);
+				display: inline;
+				margin-left: 16px;
+				color: lighten($linkColor, 5)
+			}
+		}
+
+		h3 {
+			display: block;
+			width: auto;
+			padding: 0 0 0 3.75em; // top right bottom left
+			margin-top: em(-40);
+			height: auto;
+			font-weight: 400;
+			font-size: em(17);
+			color: darken($font-color, 10);
+		}
 
 		p {
-			margin:0;
+				padding: 0 0 0 (1.5em + em(40)); // top right bottom left
+			}
+
+		.media {
+			display: block;
+			margin-left:-1.5em;
+			margin-right: -3em;
+			padding-right: 24px;
+			margin-bottom: em(-30);
+			margin-top: 2em;
+			cursor: pointer;
+			position:relative;
+			color: transparentize(white, .6);
+			&:hover {
+		    	color: transparentize(white, .2);
+		    }
+
+			img {
+				width:100%;
+				height: auto;
+				@include border-bottom-radius(4px);
+			}
+			&.video:before {
+			  z-index: 25;
+			  position: absolute;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.2);
+			}
+			&.video:after {
+				font-family: "simply-social" !important;
+				content: "\e00a";
+			  z-index: 30;
+			  text-align:center;
+			  font-size: 120px;
+			  position: absolute;
+				width: 100%;
+				height: auto;
+				padding-right: 24px;
+		    top: 50%;
+		    left: 50%;
+		    margin-right: -50%;
+		     -ms-transform: translate(-50%, -50%); //IE9
+		    transform: translate(-50%, -50%);
+			}
 		}
 	}
 }

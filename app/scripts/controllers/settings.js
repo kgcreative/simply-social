@@ -8,10 +8,4 @@
  * Controller of the simplySocialApp
  */
 angular.module('simplySocialApp')
-  .controller('SettingsController', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('SettingsController', function () { });

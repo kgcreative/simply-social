@@ -8,9 +8,9 @@
       </div>
 		<div class="selector">
 			<ul class="filter">
-				<li><a>All posts</a></li>
-				<li><a>Photos</a></li>
-				<li><a>Videos</a></li>
+				<li class="current"><a ng-href="/#/">All posts</a></li>
+				<li><a ng-href="/#/photos">Photos</a></li>
+				<li><a ng-href="/#/videos">Videos</a></li>
 			</ul>
 			<ul class="toggle">
 				<li><a><i class="simply-icon-list"></i></a></li>
@@ -19,14 +19,23 @@
 		</div>
 	</div>
 
-  <div ng-class="post.postType" class="post" ng-repeat="post in allPosts | orderBy:'-timestamp'" id="{{ post.ID }}" >
-  	<img ng-src="{{ post.avatar }}" alt="{{ post.name }}" />
-  	<div class="post-details">
-	  	<div class="name"> {{ post.name }}</div>
-	  	<a ng-click="null()" class="reply"><i class="simply-icon-reply"></i></a>
-	  	<i class="simply-icon-love" ng-class=""></i>
-	  	<span am-time-ago="{{ post.timestamp  }}" am-preprocess="unix"></span>
-	  	<p ng-bind-html="post.content"></p>
+	<div class="posts">
+	  <div ng-class="post.postType" class="post" ng-repeat="post in allPosts | orderBy:'-timestamp'" id="{{ post.ID }}" >
+	  	<img ng-src="{{ post.avatar }}" alt="{{ post.name }}" class="avatar" />
+	  	<h3 class="name"> {{ post.name }}</h3>
+	  	<div class="post-details">
+		  	<a ng-click="null()" class="reply"><i class="simply-icon-reply"></i></a>
+		  	<a><i class="simply-icon-love" ng-class=""></i></a>
+		  	<!-- quick override to match the time stamp to the mock. -->
+		  	<div class="timestamp">{{ post.abbrTime }}</div>
+		  	<!-- div am-time-ago="{{ post.timestamp  }}" am-preprocess="unix" class="timestamp"></div
+				// todo: if I have time, properl implement the am-time-ago module
+		  	-->
+		  </div>
+		  <p ng-if="post.content" ng-bind-html="post.content"></p>
+			<div class="media" ng-if="post.photoUrl"><img src="{{ post.photoUrl }}" class="photo" /></div>
+			<div class="media video" ng-if="post.videoUrl" class="video"><img src="{{ post.videoUrl }}" /></div>
 	  </div>
-  </div>
+	</div>
+    
 </div>

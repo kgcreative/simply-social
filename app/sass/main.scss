@@ -14,9 +14,12 @@
 // Variables
 @import "variables";
 
-//Main styles
+// Main styles
 @import "base";
 @import "header";
 @import "content";
 @import "footer";
 @import "posts";
+
+// Compoments
+//@import "deckgrid";

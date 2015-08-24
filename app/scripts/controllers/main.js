@@ -31,9 +31,6 @@ angular.module('simplySocialApp')
 
 			$scope.videoPosts = data.posts.videos;
 
-			console.log(allPosts);
-
-
 		  $scope.scrollTo = function(id) {
 	      $location.hash(id);
 	      $anchorScroll();
@@ -41,6 +38,3 @@ angular.module('simplySocialApp')
 
 	    });
 	});
-
-
-

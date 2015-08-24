@@ -62,8 +62,8 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
   <link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css" />
+  <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -87,27 +87,26 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
       <i class="simply-icon-simply-social-logo"></i> <span class="simply">simply</span><span class="social">social</span>
     </a>
 
-    <nav role="navigation">
-      <ul id="js-navigation-menu" class="navigation-menu show">
-        <li class="nav-link more" id="profile">
-          <a href="javascript:void(0)" class="profile more nav-link" id="js-mobile-menu">
-            <picture data-alt="Jessica Tuan" data-default-src="/images/avatars/jessica-tuan_30.jpg">
-            <source srcset="/images/avatars/jessica-tuan_30.jpg 1x, /images/avatars/jessica-tuan_30-@2x.jpg 2x"/>
-            <img src="" alt="Jessica Tuan"/>
-            </picture>
-          </a>
-          <ul class="submenu">
-            <li><a href="javascript:void(0)">Profile</a></li>
-            <li><a href="javascript:void(0)">Following</a></li>
-            <li><a href="javascript:void(0)">Followers</a></li>
-            <li><a ng-href="/#/settings">Settings</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-
     <div class="navigation-tools">
-      <a href="javascript:void(0)" class="new-message"><i class="simply-icon-new-message"></i></a>
+      <nav role="navigation">
+        <ul id="js-navigation-menu" class="navigation-menu show">
+          <li class="nav-link more" id="profile">
+            <a href="javascript:void(0)" class="profile more nav-link" id="js-mobile-menu">
+              <picture data-alt="Jessica Tuan" data-default-src="/images/avatars/jessica-tuan_30.jpg">
+              <source srcset="/images/avatars/jessica-tuan_30.jpg 1x, /images/avatars/jessica-tuan_30-@2x.jpg 2x"/>
+              <img src="" alt="Jessica Tuan"/>
+              </picture>
+            </a>
+            <ul class="submenu">
+              <li><a href="javascript:void(0)">Profile</a></li>
+              <li><a href="javascript:void(0)">Following</a></li>
+              <li><a href="javascript:void(0)">Followers</a></li>
+              <li><a ng-href="/#/settings">Settings</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
       <div class="search-bar">
         <form role="search">
           <input type="search" placeholder="" />
@@ -116,6 +115,9 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
           </button>
         </form>
       </div>
+      
+      <a class="new-message"><i class="simply-icon-new-message"></i></a>
+
     </div>
 
   </div>
@@ -135,6 +137,7 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
   </ul>
 </footer>
 
+
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -143,12 +146,12 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
 <script src="bower_components/angular-aria/angular-aria.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/angular-moment/angular-moment.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="bower_components/moment/moment.js"></script>
-<script src="bower_components/angular-moment/angular-moment.js"></script>
 <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
@@ -158,6 +161,9 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>
 <script src="scripts/controllers/settings.js"></script>
+<script src="scripts/controllers/photos.js"></script>
+<script src="scripts/controllers/videos.js"></script>
+<script src="scripts/controllers/masonry.js"></script>
 <!-- endbuild -->
 </body>
 </html>
