@@ -271,8 +271,8 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.*',
-            '<%= yeoman.dist %>/styles/fonts/{,*/}*.*',
+            // '<%= yeoman.dist %>/images/{,*/}*.*',
+            '<%= yeoman.dist %>/fonts/{,*/}*.*',
             '<%= yeoman.dist %>/*.{ico,png}'
           ]
         }
@@ -343,6 +343,19 @@ module.exports = function (grunt) {
 
     // The following *-min tasks produce minified files in the dist folder
 
+    // ng-annotate tries to make the code safe for minification automatically
+    // by using the Angular long form for dependency injection.
+    ngAnnotate: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '.tmp/concat/scripts',
+          src: '*.js',
+          dest: '.tmp/concat/scripts'
+        }]
+      }
+    },
+
     imagemin: {
       dist: {
         files: [{
@@ -400,19 +413,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // ng-annotate tries to make the code safe for minification automatically
-    // by using the Angular long form for dependency injection.
-    ngAnnotate: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/concat/scripts',
-          src: '*.js',
-          dest: '.tmp/concat/scripts'
-        }]
-      }
-    },
-
     // Replace Google CDN references
     cdnify: {
       dist: {
@@ -433,7 +433,8 @@ module.exports = function (grunt) {
               '.htaccess',
               'images/{,*/}*.webp',
               '{,*/}*.html',
-              'styles/fonts/{,*/}*.*'
+              '/fonts/{,*/}*.*',
+            '/data/{,*/}*.*'
             ]
           }],
           images: [{

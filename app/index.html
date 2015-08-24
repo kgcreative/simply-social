@@ -71,9 +71,6 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
   <!-- endbuild -->
   <script src="//use.typekit.net/yof5cjw.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <script src="bower_components/better-dom/dist/better-dom.js"></script>
-  <script src="bower_components/better-dom/dist/better-dom-legacy.js"></script>
-  <script src="bower_components/better-placeholder-polyfill/dist/better-placeholder-polyfill.js"></script>
 
 </head>
 <body>
@@ -116,7 +113,7 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
         </form>
       </div>
       
-      <a class="new-message"><i class="simply-icon-new-message"></i></a>
+      <a class="new-message" href="#modal-one"><i class="simply-icon-new-message"></i></a>
 
     </div>
 
@@ -126,6 +123,19 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
 <main id="content" class="group" role="main">
   <div ng-view=""></div>
 </main>
+
+<!-- Modal -->
+<div class="modal">
+  <input id="modal" type="checkbox" name="modal" tabindex="1">
+  <div class="modal__overlay">
+    <div class="modal__box">
+      <label for="modal">&#10006;</label>
+      <h2>Modal Title</h2>
+      <p>Modal Content</p>
+    </div>
+  </div>
+</div>
+<!-- /Modal -->
 
 <footer role="contentinfo">
   <ul>
@@ -140,6 +150,7 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
 
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
+<script src="bower_components/modernizr/modernizr.js"></script>
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -152,6 +163,9 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/better-dom/dist/better-dom.js"></script>
+<script src="bower_components/better-dom/dist/better-dom-legacy.js"></script>
+<script src="bower_components/better-placeholder-polyfill/dist/better-placeholder-polyfill.js"></script>
 <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
