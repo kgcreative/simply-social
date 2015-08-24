@@ -6,175 +6,184 @@
   .read-more-state
   // .read-more-state: This is the input checkbox. We want this to be the first child after the wrap element.
   // HTML Usage: <input type="checkbox" class="read-more-state" id="_uniqueID_" name="toggle" />
-    {
-      display: none; //We don't want to show the text boxes
-      
-      ~ .read-more-trigger, 
-      ~ * .read-more-trigger {
-      // .read-more-trigger: This is used to trigger the action. It's actually the label for the .read-more-state checkbox, which we declare below.
-      // HTML Usage: <label for="_uniqueID_" class="read-more-trigger"></label>
-      // SCSS Sytax: When the trigger is a sibling, or the child of any sibling of .read-more-state within .read-more-wrap
-        cursor: pointer;
-        max-width: 670px;
-        margin-bottom: .25em;
+  {
+    display: none; //We don't want to show the text boxes
+    
+    ~ .read-more-trigger, 
+    ~ * .read-more-trigger {
+    // .read-more-trigger: This is used to trigger the action. It's actually the label for the .read-more-state checkbox, which we declare below.
+    // HTML Usage: <label for="_uniqueID_" class="read-more-trigger"></label>
+    // SCSS Sytax: When the trigger is a sibling, or the child of any sibling of .read-more-state within .read-more-wrap
+      cursor: pointer;
+      max-width: 670px;
+      margin-bottom: .25em;
 
-        &:hover {
-          // color: #ff4500;
-        }
-        
-        &:before {
-            font-family: "simply-social" !important;
-            content: "\e001";
-            font-style: normal !important;
-            font-weight: normal !important;
-            font-variant: normal !important;
-            text-transform: none !important;
-            speak: none;
-            line-height: 1;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            color: $primary-color;
-            &:hover, &:focus {
+      &:hover {
+        // color: #ff4500;
+      }
+      
+      &:before {
+          font-family: "simply-social" !important;
+          content: "\e001";
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+          speak: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          color: $primary-color;
+          &:hover, &:focus {
+          color: lighten($primary-color, 20);
+          outline-style: none;
+          }
+      }
+    } // end .read-more-trigger
+    
+    ~ .read-more-target,
+    ~ * .read-more-target {
+    // .read-more-target: This is what gets shown or hidden when the trigger is pressed.
+    // HTML Usage: <span class="read-more-target">content</span> - Note that this can be a span, a div, a p, or any other element that you want to show or hide, as long as it's a sibling, or the child of a sibling of .read-more-state
+    // SCSS Syntax: When the target is a sibling, or the child of any sibling of read-more-state, then that target's state is:
+      opacity: 0;
+      max-height: 0;
+      font-size: 0;
+      visibility: hidden;
+      transition: .125s linear;
+      display: block;
+      position: fixed;
+      left:0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width:100%;
+      height:100%;
+      background-color: transparentize(black, 0.3);
+
+      .read-more-target-inner {
+        width: 80%;
+        margin-left: -4%;
+        height: auto;
+        max-width: $content-width;
+        background-color: $accent-color;
+        position: absolute;
+        overflow: visible;
+        top: 236px;
+        left: 50%;
+        margin-right: -50%;
+         -ms-transform: translate(-50%, -55%); //IE9
+        transform: translate(-50%, -55%);
+        padding: 1.5em;
+        color: transparentize(#fff, 0.6);
+        border-radius: 4px;
+        font-size: 16px; //reset to default
+        color: $font-color;
+        font-weight: 300;
+
+        h3 {font-weight: 400;}
+
+        @include media($small-screen + 2em) {
+            margin: auto;
+          }
+
+        a {
+          color: $primary-color;
+
+          &:hover, &:focus {
             color: lighten($primary-color, 20);
             outline-style: none;
-            }
+          }
         }
-      } // end .read-more-trigger
-      
-      ~ .read-more-target,
-      ~ * .read-more-target {
-      // .read-more-target: This is what gets shown or hidden when the trigger is pressed.
-      // HTML Usage: <span class="read-more-target">content</span> - Note that this can be a span, a div, a p, or any other element that you want to show or hide, as long as it's a sibling, or the child of a sibling of .read-more-state
-      // SCSS Syntax: When the target is a sibling, or the child of any sibling of read-more-state, then that target's state is:
-        opacity: 0;
-        max-height: 0;
-        font-size: 0;
-        visibility: hidden;
-        transition: .125s linear;
-        display: block;
-        position: fixed;
-        left:0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width:100%;
-        height:100%;
-        background-color: transparentize(black, 0.3);
 
-        .read-more-target-inner {
-          width: 80%;
-          margin-left: -4%;
+        input {
+          width: 100%;
+          max-width: $content-width - 16px;
+          background-color: white;
           height: auto;
-          max-width: $content-width;
-          background-color: $accent-color;
-          position: absolute;
-          overflow: visible;
-          top: 236px;
-          left: 50%;
-          margin-right: -50%;
-           -ms-transform: translate(-50%, -55%); //IE9
-          transform: translate(-50%, -55%);
-          padding: 1.5em;
-          color: transparentize(#fff, 0.6);
-          border-radius: 4px;
-          font-size: 16px; //reset to default
+          border: 0;
+          border: none;
+          text-align:left;
+          font-size: 1.5em;
+          font-weight: 300;
+          color: $font-color;
+          margin: 0.5em 0 1em 0; // 32px / 16px // top right bottom left
 
           @include media($small-screen + 2em) {
-              margin: auto;
-            }
-
-          a {
-            color: $primary-color;
-
-            &:hover, &:focus {
-              color: lighten($primary-color, 20);
-              outline-style: none;
-            }
+            padding:0;
+            font-size: 2em;
+          }
+          &:focus {
+            outline-color: lighten($primary-color, 0.01);
+            outline-offset: 12px;
+            outline-width: 4px
+          }
+          &:placeholder {
+            color: transparentize(white, 0.6);
+          }
+          &::-webkit-input-placeholder {
+           color: transparentize(white, 0.6);
           }
 
-          input {
-            width: 100%;
-            max-width: $content-width - 16px;
-            background-color: white;
-            height: auto;
-            border: 0;
-            border: none;
-            text-align:left;
-            font-size: 1.5em;
-            font-weight: 300;
-            color: $font-color;
-            margin: 0.5em 0 1em 0; // 32px / 16px // top right bottom left
-
-            @include media($small-screen + 2em) {
-              padding:0;
-              font-size: 2em;
-            }
-            &:focus {
-              outline-color: lighten($primary-color, 0.01);
-              outline-offset: 12px;
-              outline-width: 4px
-            }
-            &:placeholder {
-              color: transparentize(white, 0.6);
-            }
-            &::-webkit-input-placeholder {
-             color: transparentize(white, 0.6);
-            }
-
-            &:-moz-placeholder { /* Firefox 18- */
-             color: transparentize(white, 0.6);  
-            }
-
-            &::-moz-placeholder {  /* Firefox 19+ */
-             color: transparentize(white, 0.6);  
-            }
-
-            &:-ms-input-placeholder {  
-             color: transparentize(white, 0.6);  
-            }
+          &:-moz-placeholder { /* Firefox 18- */
+           color: transparentize(white, 0.6);  
           }
-          .photo {
-            margin-right: 2em;
+
+          &::-moz-placeholder {  /* Firefox 19+ */
+           color: transparentize(white, 0.6);  
+          }
+
+          &:-ms-input-placeholder {  
+           color: transparentize(white, 0.6);  
+          }
+        }
+        .photo {
+          margin-right: 2em;
+        }
+      }
+    }
+    
+    // when .read-more-state is checked:
+    &:checked {
+      ~ * .read-more-target, 
+      ~ .read-more-target {
+        opacity: 1;
+        max-height: 999em;
+        font-size: inherit;
+        visibility: visible;
+      }
+      
+      ~ .read-more-target-inner .read-more-trigger,
+      ~ * .read-more-target-inner .read-more-trigger {
+        position: absolute;
+        display:block;
+        
+        &::before { 
+          content: "\e009";
+          font-size: 24px;
+          font-family: "simply-social" !important;
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+          speak: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          color: darken($accent-color, 40);
+          right: .75em;
+          top: .75em;
+
+          &:hover, &:focus {
+            color: darken($accent-color, 30);
+            outline-style: none;
+          }
+          @include media($small-screen + em(36)) {
+            right: -1.75em;
+            top: -1.75em;
           }
         }
       }
-      
-      // when .read-more-state is checked:
-      &:checked {
-        ~ * .read-more-target, 
-        ~ .read-more-target {
-          opacity: 1;
-          max-height: 999em;
-          font-size: inherit;
-          visibility: visible;
-        }
-        
-        ~ .read-more-target-inner .read-more-trigger,
-        ~ * .read-more-target-inner .read-more-trigger {
-          position: absolute;
-          display:block;
-          right: -1em;
-          top: -1em;
-          &::before { 
-            content: "\e009";
-            font-size: 24px;
-            font-family: "simply-social" !important;
-            font-style: normal !important;
-            font-weight: normal !important;
-            font-variant: normal !important;
-            text-transform: none !important;
-            speak: none;
-            line-height: 1;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            color: darken($accent-color, 40);
-            
-              &:hover, &:focus {
-                color: darken($accent-color, 30);
-                outline-style: none;
-              }
-          }
-        }
-      }  // &:checked
-    } // .read-more-state 
+    }  // &:checked
+  } // .read-more-state 
 } // END READ MORE BASE
