@@ -113,7 +113,13 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
         </form>
       </div>
       
-      <a class="new-message" href="#modal-one"><i class="simply-icon-new-message"></i></a>
+      <div class="new-message read-more-wrap">
+          <input type="checkbox" class="read-more-state" id="new-message" name="toggle" />
+          <label for="new-message" class="read-more-trigger"></label>
+          <div class="read-more-target">
+            <div class="read-more-target-inner"><label for="new-message" class="read-more-trigger"></label></div>
+          </div>
+      </div>
 
     </div>
 
@@ -123,19 +129,6 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
 <main id="content" class="group" role="main">
   <div ng-view=""></div>
 </main>
-
-<!-- Modal -->
-<div class="modal">
-  <input id="modal" type="checkbox" name="modal" tabindex="1">
-  <div class="modal__overlay">
-    <div class="modal__box">
-      <label for="modal">&#10006;</label>
-      <h2>Modal Title</h2>
-      <p>Modal Content</p>
-    </div>
-  </div>
-</div>
-<!-- /Modal -->
 
 <footer role="contentinfo">
   <ul>

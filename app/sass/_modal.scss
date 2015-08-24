@@ -1,127 +1,162 @@
-.modal {
-  display: block;
-  padding: 0 1em;
-  text-align: center;
-  width: 100%;
-}
+// READ MORE BASE
+.read-more-wrap {
 
-@media (min-width: 43.75em) {
+  .read-more-state
+  // .read-more-state: This is the input checkbox. We want this to be the first child after the wrap element.
+  // HTML Usage: <input type="checkbox" class="read-more-state" id="_uniqueID_" name="toggle" />
+    {
+      display: none; //We don't want to show the text boxes
+      
+      ~ .read-more-trigger, 
+      ~ * .read-more-trigger {
+      // .read-more-trigger: This is used to trigger the action. It's actually the label for the .read-more-state checkbox, which we declare below.
+      // HTML Usage: <label for="_uniqueID_" class="read-more-trigger"></label>
+      // SCSS Sytax: When the trigger is a sibling, or the child of any sibling of .read-more-state within .read-more-wrap
+        cursor: pointer;
+        max-width: 670px;
+        margin-bottom: .25em;
 
-.modal {
-  padding: 1em 2em;
-  text-align: right;
-}
-}
+        &:hover {
+          // color: #ff4500;
+        }
+        
+        &:before {
+            font-family: "simply-social" !important;
+            content: "\e001";
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+      } // end .read-more-trigger
+      
+      ~ .read-more-target,
+      ~ * .read-more-target {
+      // .read-more-target: This is what gets shown or hidden when the trigger is pressed.
+      // HTML Usage: <span class="read-more-target">content</span> - Note that this can be a span, a div, a p, or any other element that you want to show or hide, as long as it's a sibling, or the child of a sibling of .read-more-state
+      // SCSS Syntax: When the target is a sibling, or the child of any sibling of read-more-state, then that target's state is:
+        opacity: 0;
+        max-height: 0;
+        font-size: 0;
+        visibility: hidden;
+        transition: .125s linear;
+        display: block;
+        position: fixed;
+        left:0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width:100%;
+        height:100%;
+        background-color: transparentize(black, 0.3);
 
-.modal > label {
-  background: #000;
-  border-radius: .2em;
-  color: #FFDE16;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: bold;
-  margin: 0.5em 1em;
-  padding: 0.75em 1.5em;
-  -webkit-transition: all 0.55s;
-  transition: all 0.55s;
-}
+        .read-more-target-inner {
+          width: 100%;
+          height: auto;
+          max-width: $content-width;
+          background-color: $accent-color;
+          position: absolute;
+          overflow: visible;
+          top: 50%;
+          left: 50%;
+          margin-right: -50%;
+           -ms-transform: translate(-50%, -55%); //IE9
+          transform: translate(-50%, -55%);
+          padding: 1.5em;
+          color: transparentize(#fff, 0.6);
+          border-radius: 4px;
 
-.modal > label:hover {
-  -webkit-transform: scale(0.97);
-  -ms-transform: scale(0.97);
-  transform: scale(0.97);
-}
+          a {
+            color: transparentize(#fff, 0.6);
 
-.modal input {
-  position: absolute;
-  right: 100px;
-  top: 30px;
-  z-index: -10;
-}
+            &:hover, &:focus {
+              color: transparentize(#fff, 0.4);
+              outline-style:none;
+            }
+          }
 
-.modal__overlay {
-  background: black;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  text-align: center;
-  top: 0;
-  z-index: -800;
-}
+          input {
+            width: 100%;
+            max-width: $content-width - 16px;
+            background-color: transparent;
+            height: auto;
+            border: 0;
+            border: none;
+            text-align:left;
+            font-size: 1.5em;
+            font-weight: 300;
+            color: transparentize(white, 0.3);
+            margin: 0.5em 0 1em 0; // 32px / 16px // top right bottom left
 
-.modal__box {
-  padding: 1em .75em;
-  position: relative;
-  margin: 1em auto;
-  max-width: 500px;
-  width: 90%;
-}
+            @include media($small-screen + 2em) {
+              padding:0;
+              font-size: 2em;
+            }
+            &:focus {
+              outline-color: lighten($primary-color, 0.01);
+              outline-offset: 12px;
+              outline-width: 4px
+            }
+            &:placeholder {
+              color: transparentize(white, 0.6);
+            }
+            &::-webkit-input-placeholder {
+             color: transparentize(white, 0.6);
+            }
 
-@media (min-height: 37.5em) {
+            &:-moz-placeholder { /* Firefox 18- */
+             color: transparentize(white, 0.6);  
+            }
 
-.modal__box {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%, -80%);
-  -ms-transform: translate(-50%, -80%);
-  transform: translate(-50%, -80%);
-}
-}
+            &::-moz-placeholder {  /* Firefox 19+ */
+             color: transparentize(white, 0.6);  
+            }
 
-@media (min-width: 50em) {
+            &:-ms-input-placeholder {  
+             color: transparentize(white, 0.6);  
+            }
+          }
+          .photo {
+            margin-right: 2em;
+          }
+        }
+      }
+      
+      // when .read-more-state is checked:
+      &:checked {
+        ~ * .read-more-target, 
+        ~ .read-more-target {
+          opacity: 1;
+          max-height: 999em;
+          font-size: inherit;
+          visibility: visible;
+        }
+        
+        ~ .read-more-target-inner .read-more-trigger,
+        ~ * .read-more-target-inner .read-more-trigger {
+          position: absolute;
+          display:block;
+          right: -1em;
+          top: -1em;
+          &::before { 
+            content: "\e009";
+            font-family: "simply-social" !important;
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
 
-.modal__box { padding: 1.75em; }
+          }
+        }
+      }  // &:checked
+    } // .read-more-state 
 }
-
-.modal__box label {
-  background: #FFDE16;
-  border-radius: 50%;
-  color: black;
-  cursor: pointer;
-  display: inline-block;
-  height: 1.5em;
-  line-height: 1.5em;
-  position: absolute;
-  right: .5em;
-  top: .5em;
-  width: 1.5em;
-}
-
-.modal__box h2 {
-  color: #FFDE16;
-  margin-bottom: 1em;
-  text-transform: uppercase;
-}
-
-.modal__box p {
-  color: #FFDE16;
-  text-align: left;
-}
-
-.modal__overlay {
-  opacity: 0;
-  overflow: hidden;
-  -webkit-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  transform: scale(0.5);
-  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-input:checked ~ .modal__overlay {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-  z-index: 800;
-}
-
-input:focus + label {
-  -webkit-transform: scale(0.97);
-  -ms-transform: scale(0.97);
-  transform: scale(0.97);
-}
+// END READ MORE BASE
