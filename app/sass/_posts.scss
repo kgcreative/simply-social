@@ -2,9 +2,10 @@
 	padding-top: 1em;
 	min-height: em(600);
 	.post {
+		position:relative;
 		max-width: $content-width;
 		margin: 2em;
-		border: 1px solid darken($accent-color, 5);
+		border: 1.5px solid darken($accent-color, 8);
 		border-radius: 4px;
 		padding: 1.5em;
 		overflow: hidden;
@@ -23,18 +24,25 @@
 			height: em(40);
 			border-radius: 4px;
 			display: block;
+			position: absolute;
+			top: 1.5em;
+			left: 1.5em;
 		}
 
 		.post-details {
+			position: absolute;
+			right: 1em;
+			bottom: 1em;
 			display: block;
-			width: em(200);
-			padding: 1.5em 0 0 0; // top right bottom left
-			margin-top: em(-44);
-			// margin-bottom: em(-40);
+			width: auto;;
+			padding: 0; // top right bottom left
 			height: auto;
-			float:right;
 			text-align: right;
 			color: $linkColor;
+
+			@include media($small-screen + 4em) {
+				top: 1em;
+			}
 
 
 			.timestamp{
@@ -48,44 +56,62 @@
 				font-size: em(13);
 				display: inline;
 				margin-left: 16px;
-				color: lighten($linkColor, 5)
+				color: lighten($linkColor, 5);
 			}
 		}
 
 		h3 {
 			display: block;
 			width: auto;
-			padding: 0 0 0 3.75em; // top right bottom left
-			margin-top: em(-40);
+			padding: 0 0 0.15em em((16 / 17) * (16 * 1.25)) + em(37); // top right bottom left
 			height: auto;
 			font-weight: 400;
 			font-size: em(17);
 			color: darken($font-color, 10);
+			margin: 0;
 		}
 
 		p {
-				padding: 0 0 0 (1.5em + em(40)); // top right bottom left
+				padding: 0 0 1.25em (1.25em + em(40)); // top right bottom left
+				margin:0;
+				a {
+					break-word: break-all;
+					overflow-wrap: break-word;
+				}
+
 			}
 
 		.media {
-			display: block;
-			margin-left:-1.5em;
-			margin-right: -3em;
-			padding-right: 24px;
-			margin-bottom: em(-30);
-			margin-top: 2em;
-			cursor: pointer;
-			position:relative;
+			position: inline-block;
+	  	padding:0;
+	  	margin-top:0;
+	  	margin-left:-1.5em;
+			margin-right: -1.5em;
+			margin-bottom: 2.5em;
+	  	
+	  	height:auto;
 			color: transparentize(white, .6);
+			@include border-bottom-radius(0);
+
 			&:hover {
 		    	color: transparentize(white, .2);
 		    	transition: color $base-duration $base-timing;
 		    }
 
+		  @include media($small-screen + 4em) {
+		  	margin-bottom: -1.5em;
+		  	@include border-bottom-radius(4px);
+		  }
+
 			img {
+				position:inline;
+				vertical-align: bottom;
 				width:100%;
 				height: auto;
-				@include border-bottom-radius(4px);
+				@include border-bottom-radius(0);
+				@include media($small-screen + 4em) {
+					@include border-bottom-radius(4px);
+				}
 			}
 			&.video:before {
 			  z-index: 25;
