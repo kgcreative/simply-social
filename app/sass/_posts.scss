@@ -79,6 +79,7 @@
 			color: transparentize(white, .6);
 			&:hover {
 		    	color: transparentize(white, .2);
+		    	transition: color $base-duration $base-timing;
 		    }
 
 			img {
@@ -106,7 +107,7 @@
 		    top: 50%;
 		    left: 50%;
 		    margin-right: -50%;
-		     -ms-transform: translate(-50%, -50%); //IE9
+		    -ms-transform: translate(-50%, -50%); //IE9
 		    transform: translate(-50%, -50%);
 			}
 		}

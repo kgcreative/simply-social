@@ -10,7 +10,6 @@
 angular.module('simplySocialApp')
   .controller('MainController', function ($scope, $rootScope, $http, $anchorScroll, $location) {
   	 $http.get('/data/content.json').success(function (data) { 
-	    console.log('success!');
 	    $rootScope.postData = data;
 	    
 	    var allPosts = [];

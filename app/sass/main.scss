@@ -16,10 +16,13 @@
 
 // Main styles
 @import "base";
+@import "typography";
 @import "header";
 @import "content";
 @import "footer";
 @import "posts";
+@import "settings";
 
 // Compoments
 @import "modal";
+@import "inputs";

@@ -33,8 +33,8 @@
 		  	-->
 		  </div>
 		  <p ng-if="post.content" ng-bind-html="post.content"></p>
-			<div class="media" ng-if="post.photoUrl"><img src="{{ post.photoUrl }}" class="photo" /></div>
-			<div class="media video" ng-if="post.videoUrl" class="video"><img src="{{ post.videoUrl }}" /></div>
+			<div class="media" ng-if="post.photoUrl"><img ng-src="{{ post.photoUrl }}" class="photo" /></div>
+			<div class="media video" ng-if="post.videoUrl" class="video"><img ng-src="{{ post.videoUrl }}" class="video" /></div>
 	  </div>
 	</div>
     
