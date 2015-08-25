@@ -10,7 +10,7 @@ $borderColor: #b3b3b3;
 $base-border: 1px solid #ccc;
 $base-font-color: $font-color !default;
 $base-border-color: gainsboro !default;
-$base-border-radius: 3px !default;
+$base-border-radius: 4px !default;
 $action-color: $linkColor !default;
 $base-font-size: 16px !default;
 $base-line-height: 1.5em !default;
@@ -32,3 +32,28 @@ $base-font-family: $font-family;
 $content-width: 575px !default;
 $large-screen: em(860) !default;
 $small-screen: em($content-width) !default;
+
+// Centering
+// @include vWrap(100%)
+@mixin vWrap($vWrap-height) {
+	$vWrap-height: 100% !default;
+	height: $vWrap-height;
+	text-align: center;
+	white-space: nowrap;
+	&:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    margin-right: -.25em;
+    height: 100%;
+	}
+}
+// @include vBox(1em)
+@mixin vBox($vBox-padding) {
+	$vBox-padding: 1em !default;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  padding: $vBox-padding;
+}

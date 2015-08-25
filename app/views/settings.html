@@ -1,33 +1,59 @@
-<div class="settings">
+<form class="form-1 settings">
 	<h2>Settings</h2>
-	<p class="upper"><small><strong>Account</strong></small></p>
-	<img class="profile-pic" src="/images/avatars/jessica-tuan_85-@2x.jpg" /><!-- hard-coding this, but this should really come from the API -->
-	<div class="change" ngClick="null()">change</div>
-	<ul class="examples input">
-	  <li>
-	    <label checkbox><input type="checkbox"><i></i>Checkbox</label>
-	    <label checkbox><input type="checkbox" checked><i></i>Checkbox</label>
-	    <label checkbox><input type="checkbox" disabled><i></i>Checkbox</label>
-	  </li>
-	  <li>
-	    <label toggle><input type="checkbox"><i></i>toggle</label>
-	    <label toggle><input type="checkbox" disabled><i></i>toggle</label>
-	  </li>
-	  <li>
-	    <form action="">
-	    <label radio><input type="radio" name="group"><i></i>Radio</label>
-	    <label radio><input type="radio" name="group" checked><i></i>Radio</label>
-	    <label radio><input type="radio" name="group" disabled><i></i>Radio</label>
-	  </li>
-	  <li>
-	    <input type="button" value="button">
-	    <button>button</button>
-	  </li>
-	  <li>
-	    <input type="reset">
-	  </li>
-	  <li>
-	    <input type="submit">
+	<p class="section">Account</p>
+	<div class="left">
+		<img class="profile-pic" src="/images/avatars/jessica-tuan_85-@2x.jpg" /><!-- hard-coding this, but this should really come from the API -->
+		<div class="change" ngClick="null()">change</div>
+	</div>
+
+	<div class="right">
+		<p class="field">
+			<input type="text" name="name" placeholder="Jessica Tuan"><!-- normally we'd get this from the api -->
+			<i class="simply-icon-user"></i>
+		</p>
+		<p class="field">
+			<input type="text" name="email" placeholder="jessica@mail.com"><!-- normally we'd get this value from the json api -->
+			<i class="simply-icon-mail"></i>
+		</p>
+		<p class="field">
+  		<input type="password" name="password" placeholder="••••••••">
+  		<i class="simply-icon-password"></i>
+  		<span class="password-label">change</span>
+		</p>        
+	</div>
+
+	<hr />
+
+	<p class="section">Notifications</p>
+
+	<ul class="input">
+	  <li><label toggle><input type="checkbox" checked><i></i>email me when my posts are marked as favorites</label></li>
+		<li><label toggle><input type="checkbox" checked><i></i>email me when I'm mentioned</label></li>
+		<li><label toggle><input type="checkbox" checked><i></i>email me when I get a reply</label></li>
+		<li><label toggle><input type="checkbox" checked><i></i>email me when someone follows me</label></li>
 	  </li>
 	</ul>
-</div>
+
+	<hr />
+
+	<p class="section">Privacy</p>
+
+	<ul class="input">
+	  <li>
+	    <label radio><input type="radio" name="tags"><i></i>allow anyone to tag me</label><br />
+	    <label radio><input type="radio" name="tags" checked><i></i>only allow people I follow to tag me</label><br />
+	    <label radio><input type="radio" name="tags"><i></i>don't allow anyone to tag me</label><br />
+	  </li>
+	  <li><label radio><input type="checkbox" name="location" checked><i></i>add a location to my posts</label></li>
+	  <li><label radio><input type="checkbox" name="location" checked><i></i>let others find me by my email address</label></li>
+	  <li><label radio><input type="checkbox" name="location" checked><i></i>taylor ads based on my information</label></li>
+	</ul>
+
+	  <hr />
+
+  <ul class="input">
+	  <li>
+	    <input type="button" value="Save Changes">
+	  </li>  
+	</ul>
+</form>
