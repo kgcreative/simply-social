@@ -34,10 +34,8 @@ $large-screen: em(860) !default;
 $small-screen: em($content-width) !default;
 
 // Centering
-// @include vWrap(100%)
-@mixin vWrap($vWrap-height) {
-	$vWrap-height: 100% !default;
-	height: $vWrap-height;
+// @include vWrap()
+@mixin vWrap {
 	text-align: center;
 	white-space: nowrap;
 	&:before{
@@ -45,15 +43,13 @@ $small-screen: em($content-width) !default;
     display: inline-block;
     vertical-align: middle;
     width: 0;
-    margin-right: -.25em;
+    margin-right: 0;
     height: 100%;
 	}
 }
-// @include vBox(1em)
-@mixin vBox($vBox-padding) {
-	$vBox-padding: 1em !default;
+// @include vBox()
+@mixin vBox {
   display: inline-block;
   vertical-align: middle;
   white-space: normal;
-  padding: $vBox-padding;
 }
