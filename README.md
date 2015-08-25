@@ -25,6 +25,6 @@ Run `$ grunt` to initialize the build
 
 Run `$ grunt serve` to initialize the environment with a local webserver & LiveReload.
 
-## Testing
+## Post Mortem:
 
-Experimental: Running `grunt test` will run the unit tests with karma.
+I bit a bit more than I could chew by attempting to develop a fully featured UI. I should have simply built out the pages one by one with their resulting CSS. This would have resulted in a > 1 week build time. With that said, I learned a few things, and I will be taking this into consideration the next time I need to scaffold a project.
