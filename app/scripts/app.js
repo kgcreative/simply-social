@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc overview
- * @name simplySocialApp
+ * @name simplySocial
  * @description
- * # simplySocialApp
+ * # simplySocial
  *
  * Main module of the application.
  */
 
 angular
-  .module('simplySocialApp', [
+  .module('simplySocial', [
     'ngAnimate',
     'ngAria',
     'ngCookies',

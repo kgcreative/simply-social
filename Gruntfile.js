@@ -77,7 +77,8 @@ module.exports = function (grunt) {
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
-          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          '/fonts/{,*/}*.{woff,eot,svg,ttf}'
         ]
       }
     },
@@ -269,11 +270,11 @@ module.exports = function (grunt) {
       dist: {
         files: {
           src: [
-            '<%= yeoman.dist %>/scripts/{,*/}*.js',
-            '<%= yeoman.dist %>/styles/{,*/}*.css',
+            //'<%= yeoman.dist %>/scripts/{,*/}*.js',
+            //'<%= yeoman.dist %>/styles/{,*/}*.css',
             // '<%= yeoman.dist %>/images/{,*/}*.*',
-            '<%= yeoman.dist %>/fonts/{,*/}*.*',
-            '<%= yeoman.dist %>/*.{ico,png}'
+            // '<%= yeoman.dist %>/fonts/{,*/}*.*',
+            //'<%= yeoman.dist %>/*.{ico,png}'
           ]
         }
       }
@@ -403,7 +404,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       dist: {
         options: {
-          module: 'simplyAngularApp',
+          module: 'simplySocial',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
@@ -434,7 +435,7 @@ module.exports = function (grunt) {
               'images/{,*/}*.webp',
               '{,*/}*.html',
               '/fonts/{,*/}*.*',
-            '/data/{,*/}*.*'
+              '/data/{,*/}*.*'
             ]
           }],
           images: [{

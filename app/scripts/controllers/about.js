@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name simplySocialApp.controller:AboutController
+ * @name simplySocial.controller:AboutController
  * @description
  * # AboutController
- * Controller of the simplySocialApp
+ * Controller of the simplySocial
  */
-angular.module('simplySocialApp')
+angular.module('simplySocial')
   .controller('AboutController', function () {
  
   });

@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name simplySocialApp.controller:PhotosController
+ * @name simplySocial.controller:PhotosController
  * @description
  * # PhotosController
- * Controller of the simplySocialApp
+ * Controller of the simplySocial
  */
-angular.module('simplySocialApp')
+angular.module('simplySocial')
   .controller('PhotosController', function ($scope, $rootScope, $http) {
   	$http.get('/data/content.json').success(function (data) { 
 	   $rootScope.postData = data;

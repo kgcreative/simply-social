@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name simplySocialApp.controller:SettingsController
+ * @name simplySocial.controller:SettingsController
  * @description
  * # SettingsController
- * Controller of the simplySocialApp
+ * Controller of the simplySocial
  */
-angular.module('simplySocialApp')
+angular.module('simplySocial')
   .controller('SettingsController', function () { });

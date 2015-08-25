@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name simplySocialApp.controller:MasonryController
+ * @name simplySocial.controller:MasonryController
  * @description
  * # MasonryController
- * Controller of the simplySocialApp
+ * Controller of the simplySocial
  */
-angular.module('simplySocialApp')
+angular.module('simplySocial')
   .controller('MasonryController', function ($scope, $rootScope, $http, $anchorScroll, $location) {
   	 $http.get('/data/content.json').success(function (data) { 
 	    $rootScope.postData = data;

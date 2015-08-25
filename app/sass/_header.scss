@@ -13,7 +13,8 @@ header.navigation {
   $navigation-active-link-color: transparentize(white, 0.5);
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 12em;
-  $horizontal-bar-mode: $small-screen;
+  $horizontal-bar-mode: em(560);
+
 
   background-color: $navigation-background;
   //border-top: .1875em solid $primary-color;
@@ -319,10 +320,7 @@ header.navigation {
       $search-bar-border: 1px solid $search-bar-border-color;
       $search-bar-background: lighten($search-bar-border-color, 10%);
 
-      padding: em(15px) 1em;
-      width: em(175px);
-      display: inline-block;
-      margin: 0 auto; // top right bottom left
+      display:none;
 
       @include media($horizontal-bar-mode) {
         display: inline-block;
@@ -330,6 +328,7 @@ header.navigation {
         width: em(218);
         padding: em(15) em(8); // top right bottom left
         float: right;
+        
 
         input {
           box-sizing:border-box;
