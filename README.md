@@ -14,18 +14,20 @@ This assumes you have [node.js](https://nodejs.org/), [Yeoman](http://yeoman.io/
 If you don't have them installed, you can do so via running the command:
 `$ npm install -g yo bower grunt-cli`
 
-Clone or fork the repo:
-[1] `$ git clone https://github.com/kgcreative/simply-social`
+1.  Clone or fork the repo:
+  * `$ git clone https://github.com/kgcreative/simply-social`
 
-Install the dependencies from the package.json file to the project:
-[2] `$ npm install`
+2.  Install the dependencies from the package.json file to the project:
+  * `$ npm install`
 
-Install the Bower dependencies 
-[3] `$ bower update`
+3.  Install the Bower dependencies 
+  * `$ bower update`
 
-[4] Run `$ grunt` to initialize the build
+4.  Run Grunt to initialize the build
+  * `$ grunt`
 
-[5] Run `$ grunt serve` to initialize the environment with a local webserver & LiveReload.
+5.  Run Grunt Serve to initialize the environment with a local webserver & LiveReload.
+  * `$ grunt serve`
 
 ## Post Mortem:
 
