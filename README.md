@@ -5,6 +5,8 @@ version 0.12.1. and  [bourbon neat generator](https://github.com/koolth/generato
 
 this is a personal project to attempt to build out the front end of [simply social](https://projects.invisionapp.com/boards/2BAT3RAH8Q7/)
 
+Updated! [live preview!](http://kevingarcia.me)
+
 ## Build & development
 
 This assumes you have [node.js](https://nodejs.org/), [Yeoman](http://yeoman.io/), [Bower](http://bower.io/), and [Grunt](http://gruntjs.com/) installed (if you're still setting up Yeoman, you can check out the [official documentation](http://yeoman.io/learning/index.html)).
