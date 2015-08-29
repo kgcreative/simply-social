@@ -1,25 +1,27 @@
 <form class="form-1 settings">
 	<h2>Settings</h2>
 	<p class="section">Account</p>
-	<div class="left">
-		<img class="profile-pic" src="/images/avatars/jessica-tuan_85-@2x.jpg" /><!-- hard-coding this, but this should really come from the API -->
-		<div class="change" ngClick="null()">change</div>
-	</div>
+	<div class="profile">
+		<div class="left">
+			<img class="profile-pic" src="/images/avatars/jessica-tuan_85-@2x.jpg" /><!-- hard-coding this, but this should really come from the API -->
+			<div class="change" ngClick="null()">change</div>
+		</div>
 
-	<div class="right">
-		<p class="field">
-			<input type="text" name="name" placeholder="Jessica Tuan"><!-- normally we'd get this from the api -->
-			<i class="simply-icon-user"></i>
-		</p>
-		<p class="field">
-			<input type="text" name="email" placeholder="jessica@mail.com"><!-- normally we'd get this value from the json api -->
-			<i class="simply-icon-mail"></i>
-		</p>
-		<p class="field">
-  		<input type="password" name="password" placeholder="••••••••">
-  		<i class="simply-icon-password"></i>
-  		<span class="password-label">change</span>
-		</p>        
+		<div class="right">
+			<p class="field">
+				<input type="textarea" style="text" name="name" placeholder="Jessica Tuan" ngTrim="false"><!-- normally we'd get this from the api -->
+				<i class="simply-icon-user"></i>
+			</p>
+			<p class="field">
+				<input type="textarea" style="text" name="email" placeholder="jessica@mail.com" ngTrim="false"><!-- normally we'd get this value from the json api -->
+				<i class="simply-icon-mail"></i>
+			</p>
+			<p class="field">
+	  		<input type="password" name="password" placeholder="••••••••">
+	  		<i class="simply-icon-password"></i>
+	  		<span class="password-label">change</span>
+			</p>        
+		</div>
 	</div>
 
 	<hr />

@@ -60,7 +60,7 @@ module.exports = function (grunt) {
       },
 
       sass: {
-          files: ['<%= yeoman.app %>/sass/{,*/}*.{scss,sass}'],
+          files: ['<%= yeoman.app %>/scss/{,*/}*.{scss,sass}'],
           tasks: ['sass:server', 'autoprefixer']
       },
 
@@ -195,7 +195,7 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/sass',
+          cwd: '<%= yeoman.app %>/scss',
           src: ['*.scss'],
           dest: '.tmp/styles',
           ext: '.css'
@@ -204,7 +204,7 @@ module.exports = function (grunt) {
       server: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/sass',
+          cwd: '<%= yeoman.app %>/scss',
           src: ['*.scss'],
           dest: '.tmp/styles',
           ext: '.css'
@@ -245,7 +245,7 @@ module.exports = function (grunt) {
         ignorePath:  /\.\.\//
       },
       sass: {
-        src: ['<%= yeoman.app %>/sass/{,*/}*.{scss,sass}']
+        src: ['<%= yeoman.app %>/scss/{,*/}*.{scss,sass}']
       },
       test: {
         devDependencies: true,
@@ -287,6 +287,7 @@ module.exports = function (grunt) {
       html: '<%= yeoman.app %>/index.html',
       options: {
         dest: '<%= yeoman.dist %>',
+        root: './',
         flow: {
           html: {
             steps: {

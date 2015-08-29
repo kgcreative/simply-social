@@ -47,8 +47,29 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
 -->
 
 <!doctype html>
-<html lang="EN" ng-app="simplySocial">
+<html lang="EN">
 <head>
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular-moment/angular-moment.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/better-dom/dist/better-dom.js"></script>
+  <script src="bower_components/better-dom/dist/better-dom-legacy.js"></script>
+  <script src="bower_components/better-placeholder-polyfill/dist/better-placeholder-polyfill.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="author" content="Kevin Garcia">
@@ -72,7 +93,7 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 </head>
-<body>
+<body ng-app="simplySocial">
 <!--[if lte IE 8]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -143,28 +164,6 @@ ___) (___| )  \  |  \   /  ___) (___/\____) |___) (___| (___) || )  \  |
     <li>&copy; 2014 SimplySocial</li>
   </ul>
 </footer>
-
-
-<!-- build:js scripts/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/modernizr/modernizr.js"></script>
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/angular-aria/angular-aria.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-messages/angular-messages.js"></script>
-<script src="bower_components/moment/moment.js"></script>
-<script src="bower_components/angular-moment/angular-moment.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="bower_components/better-dom/dist/better-dom.js"></script>
-<script src="bower_components/better-dom/dist/better-dom-legacy.js"></script>
-<script src="bower_components/better-placeholder-polyfill/dist/better-placeholder-polyfill.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
