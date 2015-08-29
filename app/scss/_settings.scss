@@ -1,0 +1,161 @@
+.settings {
+	$border: 2px solid darken($base-border-color, 5)!default;
+	padding-top: 1em;
+	min-height: em(600);
+	max-width: $content-width;
+	margin: 2em;
+	padding: 1.5em;
+	overflow: hidden;
+	height: auto;
+	font-size: $base-font-size;
+	@include outer-container();
+
+	@include media($small-screen + 4em) {
+		width: 100%;
+		max-width: $content-width;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.profile-pic {
+		width: 80px;
+		height: auto;
+		border-radius: $base-border-radius
+	}
+
+	.change {
+		border: 2px solid darken($base-border-color, 5);
+		color: darken($base-border-color, 5);
+		border-radius: $base-border-radius + 2;
+		width: 80px;
+		text-align: center;
+		cursor: pointer;
+		margin-left: auto;
+		margin-right:auto;
+		&:hover {
+			color: lighten($base-border-color, 5);
+			border-color: lighten($base-border-color, 5);
+			transition: color $base-duration $base-timing, border-color $base-duration $base-timing;
+		}
+
+		@include media($small-screen + 4em) {
+			margin-right: 0;
+			margin-top:0;
+		}
+	}
+
+	.profile {
+		width: 100%;
+		text-align: center;
+		@include media($small-screen + 4em) {
+			text-align: left;
+		}
+	}
+
+	.left {
+		display: block;
+		vertical-align: top;
+		width:auto;
+		padding: 0 1em;
+		margin: 0 auto 2em auto;
+		text-align: center;
+		@media all and (max-width: em(($small-screen + 4em) - 0.0625em)) {
+			@include clearfix();
+		}
+
+		@include media($small-screen + 4em) {
+			display: inline-block;
+			width: auto;
+			margin-right: 1em;
+			margin-top:0;
+		}
+	}
+	.right {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		display: inline-block;
+		height:auto;
+		vertical-align: top;
+		text-align: center;
+		padding: .5em 1em;
+		max-width: 30em;
+
+			@include media($small-screen + 4em) {
+			width: auto;
+			text-align: left;
+			margin-left: 2.5em;
+			margin-right: auto;
+			margin-top:0;
+		}
+	}
+
+	p.section {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 0.775em;
+		letter-spacing: 0.5px;
+		color: lighten($base-font-color, 10);
+	}
+
+	// the form style goes here
+
+	.field {
+    position: relative; /* For the icon positioning */
+	}
+
+	input[type="textarea"], input[type="password"]
+	{
+	    font-weight: 400;
+	    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+
+	    /* Size and position */
+	    width: 100%;
+	    padding: 10px 18px 10px 45px;
+
+	    /* Styles */
+	    border: $border;
+	    border-radius: $base-border-radius;
+	    background: transparent;
+	    color: #777;
+	    transition: color 0.3s ease-out;
+	}
+
+	input[type=text], input {
+	    margin-bottom: 10px;
+	}
+
+	.field i {
+    /* Size and position */
+    left: 0.125em;
+    top: 0.125em;
+    position: absolute;
+    height: 2.5em;
+    width: 2.5em;
+
+    /* Styles */
+    color: #777777;
+    text-align: center;
+    line-height: 42px;
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+	}
+
+	.field .password-label {
+    /* Size and position */
+    right: 2em;
+    top: 0.125em;
+    position: absolute;
+    height: 2.5em;
+    width: 5em;
+    font-size: .75em;
+
+    /* Styles */
+    color: #ccc;
+    text-align: right;
+    line-height: 42px;
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+	}
+
+}

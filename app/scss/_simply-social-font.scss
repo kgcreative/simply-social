@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "simply-social";
+  src:url("/fonts/simply-social-font/simply-social.eot");
+  src:url("/fonts/simply-social-font/simply-social.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/simply-social-font/simply-social.woff") format("woff"),
+    url("/fonts/simply-social-font/simply-social.ttf") format("truetype"),
+    url("/fonts/simply-social-font/simply-social.svg#simply-social") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "simply-social" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="simply-icon-"]:before,
+[class*=" simply-icon-"]:before {
+  font-family: "simply-social" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.simply-icon-new-message:before {
+  content: "\e001";
+}
+.simply-icon-simply-social-logo:before {
+  content: "\e000";
+}
+.simply-icon-search:before {
+  content: "\e002";
+}
+.simply-icon-reply:before {
+  content: "\e004";
+}
+.simply-icon-love:before {
+  content: "\e003";
+}
+.simply-icon-video:before {
+  content: "\e005";
+}
+.simply-icon-photo:before {
+  content: "\e006";
+}
+.simply-icon-tile:before {
+  content: "\e007";
+}
+.simply-icon-list:before {
+  content: "\e008";
+}
+.simply-icon-close:before {
+  content: "\e009";
+}
+.simply-icon-play:before {
+  content: "\e00a";
+}
+.simply-icon-mail:before {
+  content: "\e00c";
+}
+.simply-icon-password:before {
+  content: "\e00b";
+}
+.simply-icon-user:before {
+  content: "\e00d";
+}

@@ -1,0 +1,161 @@
+#content {
+	.hero {
+		position: relative;
+		width: 100%;
+		height: 425px;
+		background-image: url("/images/hero.jpg");
+		background-size: 100%; //older browsers
+		background-size: cover;
+
+		.write-box {
+			width: 100%;
+			height: auto;
+			max-width: $content-width;
+			background-color: transparentize($primary-color, 0.4);
+			position: absolute;
+			overflow: hidden;
+	    top: 50%;
+	    left: 50%;
+	    margin-right: -50%;
+	     -ms-transform: translate(-50%, -55%); //IE9
+	    transform: translate(-50%, -55%);
+	    padding: 1.5em;
+	    color: transparentize(#fff, 0.6);
+	    border-radius: 4px;
+
+	    a {
+	    	color: transparentize(#fff, 0.6);
+
+	    	&:hover, &:focus {
+	    		color: transparentize(#fff, 0.4);
+	    		outline-style:none;
+	    	}
+	    }
+
+			input {
+				width: 100%;
+				max-width: $content-width - 16px;
+				background-color: transparent;
+				height: auto;
+				border: 0;
+				border: none;
+				text-align:left;
+				font-size: 1.5em;
+				font-weight: 300;
+				color: transparentize(white, 0.3);
+				margin: 0.5em 0 1em 0; // 32px / 16px // top right bottom left
+
+				@include media($small-screen + 2em) {
+		    	padding:0;
+		    	font-size: 2em;
+		  	}
+				&:focus {
+					outline-color: lighten($primary-color, 0.01);
+					outline-offset: 12px;
+					outline-width: 4px
+				}
+				&:placeholder {
+					color: transparentize(white, 0.6);
+				}
+				&::-webkit-input-placeholder {
+			   color: transparentize(white, 0.6);
+				}
+
+				&:-moz-placeholder { /* Firefox 18- */
+			   color: transparentize(white, 0.6);  
+				}
+
+				&::-moz-placeholder {  /* Firefox 19+ */
+			   color: transparentize(white, 0.6);  
+				}
+
+				&:-ms-input-placeholder {  
+			   color: transparentize(white, 0.6);  
+				}
+			}
+			.photo {
+				margin-right: 2em;
+			}
+		}
+		.selector{
+			width:100%;
+			position: absolute;
+			top:auto;
+			bottom:1px;
+			left: 50%;
+	    margin-right: -50%;
+	    padding: 0 2em;
+	     -ms-transform: translate(-50%, 0); //IE9
+	    transform: translate(-50%, 0);
+	    @include media($small-screen) {
+	    	max-width: em($content-width) + 4em;
+	    	padding:0 2em;
+				margin-left:auto;
+				margin-right:auto;
+	  	}
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				&.filter {
+					text-transform: uppercase;
+					float: left;
+					
+					li {
+						margin: 0;
+						padding: 0 0.5em 1.5em;// top right bottom left
+						letter-spacing: 1px;
+						font-size: em(11);
+						font-weight: 700;
+						border-bottom: 4px solid transparentize($primary-color, 1);
+
+						&:first-of-type {
+							margin-left: -0.5em;
+							@include media($small-screen + 2em) {
+								margin-left: 0em;
+							}
+						}
+
+						&:last-of-type {
+							padding-right: 0;
+							@include media ($small-screen + 2em) {
+								padding-right: 1.5em;
+							}
+						}
+
+						@include media($small-screen + 2em) {
+							margin-right: 2em;
+							font-size: em(13);
+						}
+
+						&:hover, &.current {
+							border-bottom: 4px solid $primary-color;
+						}
+					}
+
+				}
+				&.toggle {
+					float: right;
+					li {
+						margin-left: 1.25em;
+						padding: 0 0 1.5em;
+						font-size: em(7);
+						&:first-of-type {
+							margin-left: 0;
+						}
+						@include media($small-screen + 2em) {
+							font-size: em(8);
+						}
+					}
+				}
+
+				li {
+					display:inline-block;
+					
+				}
+			}
+		}
+	}
+}

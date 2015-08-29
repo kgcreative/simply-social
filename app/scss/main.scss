@@ -1,0 +1,28 @@
+// Base
+// http://kgcreative.com
+// 2015 Kevin Garcia
+// MIT License
+
+// bower:scss
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
+// endbower 
+
+// vendor styles
+@import "simply-social-font";
+
+// Variables
+@import "variables";
+
+// Main styles
+@import "base";
+@import "typography";
+@import "header";
+@import "content";
+@import "footer";
+@import "posts";
+@import "settings";
+
+// Compoments
+@import "modal";
+@import "inputs";
