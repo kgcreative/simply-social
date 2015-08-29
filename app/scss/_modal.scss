@@ -64,7 +64,6 @@
 
         .read-more-target-inner {
           width: 80%;
-          margin-left: -4%;
           height: auto;
           max-width: $content-width;
           background-color: darken($accent-color, 7);
@@ -81,6 +80,10 @@
           font-size: 16px; //reset to default
           color: $font-color;
           font-weight: 300;
+          @include media($small-screen + 2em) {
+            margin-left: -1em;
+          }
+
 
           h3 {font-weight: 400; margin:0; padding:0;}
 
@@ -102,7 +105,7 @@
             border: none;
             font-weight: 300;
             color: $font-color;
-            margin: 1em 0 2em 0; // 32px / 16px // top right bottom left
+            margin: 0.5em 0 1em 0; // 32px / 16px // top right bottom left
             overflow:auto;
             appearance: textarea;
             -moz-appearance: textarea;
@@ -119,8 +122,11 @@
             text-rendering: auto;
             display: inline-block;
             text-align: start;
+            font-size: 0.95em;
+            padding: 0.5em;
 
             @include media($small-screen + 2em) {
+              margin: 1em 0 2em 0; // 32px / 16px // top right bottom left
               padding:1em;
               font-size: 1em;
             }
@@ -171,9 +177,14 @@
               background-color: none;
               border-radius: 4px;
               float: right;
-              top: -2em;
-              right: -2em;
               margin-bottom: -1.5em;
+              top: 1em;
+              right: 1em;
+
+              @include media($small-screen + 2em) {
+                top: -2em;
+                right: -2em;
+              }
 
           &::before { 
             content: "\e009";
