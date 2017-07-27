@@ -61,6 +61,7 @@
         height:100%;
         background-color: transparentize(black, 0.2);
         box-sizing: border-box;
+        z-index: 999999999;
 
         .read-more-target-inner {
           width: 80%;
@@ -81,7 +82,7 @@
           color: $font-color;
           font-weight: 300;
           @include media($small-screen + 2em) {
-            margin-left: -1em;
+            
           }
 
 

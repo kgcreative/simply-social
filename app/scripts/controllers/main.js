@@ -26,9 +26,6 @@ angular.module('simplySocial')
 
 			$scope.allPosts = allPosts;
 
-			$scope.photoPosts = data.posts.photos;
-
-			$scope.videoPosts = data.posts.videos;
 
 		  $scope.scrollTo = function(id) {
 	      $location.hash(id);
